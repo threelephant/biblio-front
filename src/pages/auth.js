@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
+import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   auth: {
@@ -54,7 +55,9 @@ export default function (props) {
           spacing={2}
           >
             <Grid key={0} item className={classes.h1}>
-              <h1>Authentication</h1>
+              <Typography variant="h4">
+                Authentication
+              </Typography>
             </Grid>
             <Grid key={1} item>
               <TextField  

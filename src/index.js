@@ -10,10 +10,6 @@ import Search from './pages/search'
 import Book from './pages/book'
 import './index.css'
 
-const HelloWorld = () => (
-  <><h2>Hello World!</h2></>
-)
-
 function App() {
   return (
     <>

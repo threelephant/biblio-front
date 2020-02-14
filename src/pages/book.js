@@ -3,6 +3,8 @@ import Header from '../elements/header'
 
 export default function () {
   return (
-    <Header name="Book" />
+    <>
+      <Header />
+    </>
   )
 }
