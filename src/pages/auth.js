@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
-import { makeStyles, withTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   auth: {
@@ -28,9 +29,13 @@ const useStyles = makeStyles(theme => ({
   image: {
     margin: '2em 0 0 2.5em',
   },
+
+  link: {
+    textDecoration: 'none',
+  },
 }))
 
-export default function () {
+export default function (props) {
   const classes = useStyles()
 
   return (
@@ -73,13 +78,16 @@ export default function () {
             <Grid 
               key={3} 
               item variant="contained">
-              <Button 
-                variant="contained"
-                size="large" 
-                className={classes.button} 
-                color="primary">
-                Log In
-              </Button>
+              <Link to={`/main`} className={classes.link}>
+                <Button 
+                  variant="contained"
+                  size="large"
+                  className={classes.button} 
+                  color="primary"
+                  >
+                  Log In
+                </Button>
+              </Link>
             </Grid>
         </Grid>
       </div>
