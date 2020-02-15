@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  BrowserRouter as Router,
-  Route, Link, Redirect, withRouter
+  BrowserRouter as Router, Route
 } from 'react-router-dom'
-import Auth from './pages/auth.js'
+import Auth from './pages/auth'
+import Main from './pages/main'
+import Cart from './pages/cart'
+import Search from './pages/search'
+import Book from './pages/book'
 import './index.css'
 
 const HelloWorld = () => (
@@ -16,10 +19,10 @@ function App() {
     <>
       <Router>
         <Route exact path="/" render={() => <Auth />} />
-        <Route path="/main" render={() => <HelloWorld />} />
-        <Route path="/cart" render={() => <HelloWorld />} />
-        <Route path="/search" render={() => <HelloWorld />} />
-        <Route path="/book/:id" render={() => <HelloWorld />} />
+        <Route path="/main" render={() => <Main />} />
+        <Route path="/cart" render={() => <Cart />} />
+        <Route path="/search" render={() => <Search />} />
+        <Route path="/book/:id" render={() => <Book />} />
       </Router>
     </>
   )
