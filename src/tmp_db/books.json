@@ -1,0 +1,46 @@
+{
+  "content": [
+    {
+      "bookId": 1,
+      "title": "Huyy1",
+      "author": "asd",
+      "price": 0,
+      "pageNumber": 123213,
+      "editor": "123123",
+      "cover": "123",
+      "weight": 12312,
+      "genre": "123123",
+      "publisher": "3123",
+      "series": "3",
+      "translator": "123123",
+      "language": "312312",
+      "date": 123,
+      "height": 12312,
+      "width": 12312,
+      "length": 3123,
+      "rating": 11,
+      "url": "12312"
+    },
+    {
+      "bookId": 2,
+      "title": "AHAAHA2",
+      "author": "asd",
+      "price": 0,
+      "pageNumber": 123213,
+      "editor": "123123",
+      "cover": "123",
+      "weight": 12312,
+      "genre": "123123",
+      "publisher": "3123",
+      "series": "3",
+      "translator": "123123",
+      "language": "312312",
+      "date": 123,
+      "height": 12312,
+      "width": 12312,
+      "length": 3123,
+      "rating": 11,
+      "url": "12312"
+    }
+  ]
+}

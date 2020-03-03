@@ -18,7 +18,7 @@ function App() {
         <Route path="/main" render={() => <Main />} />
         <Route path="/cart" render={() => <Cart />} />
         <Route path="/search" render={() => <Search />} />
-        <Route path="/book/:id" render={() => <Book />} />
+        <Route path="/book/:id" render={({ match }) => <Book id={match.params.id}/>} />
       </Router>
     </>
   )
