@@ -81,7 +81,7 @@ export default function (props) {
             <Grid 
               key={3} 
               item variant="contained">
-              <Link to={`/main`} className={classes.link}>
+              <Link to={`/`} className={classes.link}>
                 <Button 
                   variant="contained"
                   size="large"

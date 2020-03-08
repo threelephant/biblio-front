@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import InputIcon from '@material-ui/icons/Input'
 import CartIcon from '@material-ui/icons/ShoppingCart'
+import Badge from '@material-ui/core/Badge'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -47,7 +48,7 @@ export default function () {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Link to={`/main`} className={classes.linkMain}>
+        <Link to={`/`} className={classes.linkMain}>
           <Typography variant="h3" className={classes.title}>
             BIBLIO
           </Typography>
@@ -59,10 +60,12 @@ export default function () {
         />
         <Link to={`/cart`} className={classes.cartIcon}>
           <IconButton edge="start" color="inherit" aria-label="menu">
-            <CartIcon fontSize="large" />
+            <Badge badgeContent={4} color="secondary">
+              <CartIcon fontSize="large" />
+            </Badge>
           </IconButton>
         </Link>
-        <Link to={`/`} className={classes.linkIcons}>
+        <Link to={`/login`} className={classes.linkIcons}>
           <IconButton edge="start" color="inherit" aria-label="menu">
             <InputIcon fontSize="large" />
           </IconButton>

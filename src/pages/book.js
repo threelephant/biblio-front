@@ -8,6 +8,8 @@ import Grid from '@material-ui/core/Grid'
 import Rating from '@material-ui/lab/Rating'
 import Divider from '@material-ui/core/Divider'
 import { Link } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+import CartIcon from '@material-ui/icons/ShoppingCart'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -23,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 
   bookInfo: {
     textAlign: 'left',
-    paddingLeft: '1em',
+    paddingLeft: '2em',
   },
 
   price: {
@@ -42,8 +44,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   raiting: {
-    textAlign: 'right',
-    paddingLeft: '9em',
+    paddingTop: '0.5em',
   },
 
   divider: {
@@ -52,12 +53,13 @@ const useStyles = makeStyles(theme => ({
   },
 
   buttons: {
-    marginBottom: '1em',
+    marginTop: '3em',
+    width: '12em',
   },
 
   bought: {
     paddingTop: '1em',
-  }
+  },
 }))
 
 export default function (props) {
@@ -80,13 +82,14 @@ export default function (props) {
         direction="row"
         spacing={1}
         className={classes.bookList}
+        justify="flex-start"
       >
         <img
           src={require('../images/under-the-dome-cover.jpeg')}
           alt="cover_book"
           className={classes.image}
         />
-        <Grid item="contained">
+        <Grid item="contained" xs={5}>
           <Grid 
             container
             direction="column"
@@ -101,9 +104,22 @@ export default function (props) {
             <Typography variant="h4">
               {book.price} ₽
             </Typography>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              className={classes.buttons}
+            >
+              <CartIcon fontSize="medium" />&#160;Add To Cart
+            </Button>
           </Grid>
         </Grid>
-        <Rating name="read-only" value={book.rating} readOnly/>
+        <Rating 
+          name="read-only" 
+          value={book.rating} 
+          className={classes.raiting} 
+          readOnly 
+        />
       </Grid>
       <Divider variant="middle" className={classes.divider}/>
       <Typography variant="h4" className={classes.bookInfo}>
@@ -121,13 +137,13 @@ export default function (props) {
             container
             direction="column"
           >
-            <img
-              src={require('../images/under-the-dome-cover.jpeg')}
-              alt="cover"
-              className={classes.miniImage}
-            >
-            </img>
             <Link to="/book/2">
+              <img
+                src={require('../images/under-the-dome-cover.jpeg')}
+                alt="cover"
+                className={classes.miniImage}
+              >
+              </img>
               <Typography variant="h6">
                 {book.title}
               </Typography>
@@ -135,7 +151,11 @@ export default function (props) {
             <Typography variant="subtitle2">
               {book.author}
             </Typography>
-            <Rating name="read-only" value={book.rating}></Rating>
+            <Rating
+              name="read-only" 
+              value={book.rating} 
+              readOnly
+            ></Rating>
             <Typography variant="h5">
               {book.price} ₽
             </Typography>
