@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
 import Header from '../elements/header'
+import Pagination from '@material-ui/lab/Pagination'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -18,6 +19,7 @@ const useStyles = makeStyles(theme => ({
   bookList: {
     textAlign: 'center',
     marginTop: '1.75em',
+    alignItems: 'center',
   },
 
   bookInfo: {
@@ -47,6 +49,10 @@ const useStyles = makeStyles(theme => ({
 
   buttons: {
     marginBottom: '1em',
+  },
+
+  paginator: {
+    margin: '0 0 1.5em 0'
   },
 }))
 
@@ -132,8 +138,10 @@ export default function () {
             <Divider variant="middle" className={classes.divider}/>
           </Container>
         )}
+        <Grid key={500} item className={classes.paginator}>
+          <Pagination count={10} color="primary" />
+        </Grid>
       </Grid>
-      <ButtonsNavigation />
     </>
   )
 }
