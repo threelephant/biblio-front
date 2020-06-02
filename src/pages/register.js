@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   button: {
-    margin: '1.5em 23.3em 0 0',
+    margin: '1.5em 22em 0 0',
   },
 
   image: {
@@ -53,14 +53,14 @@ export default function (props) {
           justify="flex-end"
           alignItems="flex-end"
           spacing={2}
-          >
+        >
             <Grid key={0} item className={classes.h1}>
               <Typography variant="h4">
-                Authentication
+                Sign Up
               </Typography>
             </Grid>
             <Grid key={1} item>
-              <TextField  
+              <TextField
                   id="email" 
                   type="email"
                   label="Email" 
@@ -78,8 +78,18 @@ export default function (props) {
                   className={classes.textfield}
                 />    
             </Grid>
+            <Grid key={3} item>
+              <TextField
+                  id="standard-password-input"
+                  label="Confirm Password"
+                  type="password"
+                  autoComplete="current-password"
+                  variant="outlined"
+                  className={classes.textfield}
+                />    
+            </Grid>
             <Grid 
-              key={3} 
+              key={4} 
               item variant="contained">
               <Link to={`/`} className={classes.link}>
                 <Button 
@@ -87,8 +97,8 @@ export default function (props) {
                   size="large"
                   className={classes.button} 
                   color="primary"
-                  >
-                  Log In
+                >
+                  Register
                 </Button>
               </Link>
             </Grid>
