@@ -70,7 +70,7 @@ export default function (props) {
     services
       .getOne(props.id)
         .then(newBook => {
-          setBook(newBook[0])
+          setBook(newBook)
       })
   }, [props.id])
   
